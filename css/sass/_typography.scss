@@ -1,0 +1,33 @@
+@use 'mixin' as *;
+
+p
+{
+    @include text();
+}
+h1
+{
+    @include text($fontSize:"text-3xl");
+}
+h2
+{
+    @include text($fontSize:"text-2xl");
+}
+h3
+{
+    @include text($fontSize:"text-xl");
+}
+h4
+{
+    @include text($fontSize:"text-lg");
+}
+a
+{
+    @include text($textdecoration: "underline");
+
+    
+}
+
+@font-face {
+    font-family: "Fairplex";
+    src: url('/css/fonts/FairplexNarrow Regular.ttf');
+}

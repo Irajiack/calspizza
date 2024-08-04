@@ -1,3 +1,107 @@
 @tailwind utilities;
 @tailwind base;
 @tailwind screens;
+body {
+  @apply bg-timberwolf
+    m-0
+    p-0
+    grid
+    grid-cols-12;
+}
+
+header {
+  @apply min-h-screen
+    text-center
+    bg-repeat
+    z-10
+    m-0
+    p-5
+    col-span-3;
+  background-image: url(/pictures/WoodTexture_Background.jpg);
+  border: 1px solid yellow;
+}
+
+main {
+  @apply m-0
+    p-5
+    col-span-9
+    text-center;
+  border: 1px solid red;
+}
+
+footer {
+  @apply m-auto
+    text-center
+    col-span-12;
+}
+
+p {
+  @apply text-taupe
+    font-fairplex
+    text-base
+    my-5
+    font-normal 
+    no-underline
+    normal-case
+    not-italic;
+}
+
+h1 {
+  @apply text-taupe
+    font-fairplex
+    text-3xl
+    my-5
+    font-normal 
+    no-underline
+    normal-case
+    not-italic;
+}
+
+h2 {
+  @apply text-taupe
+    font-fairplex
+    text-2xl
+    my-5
+    font-normal 
+    no-underline
+    normal-case
+    not-italic;
+}
+
+h3 {
+  @apply text-taupe
+    font-fairplex
+    text-xl
+    my-5
+    font-normal 
+    no-underline
+    normal-case
+    not-italic;
+}
+
+h4 {
+  @apply text-taupe
+    font-fairplex
+    text-lg
+    my-5
+    font-normal 
+    no-underline
+    normal-case
+    not-italic;
+}
+
+a {
+  @apply text-taupe
+    font-fairplex
+    text-base
+    my-5
+    font-normal 
+    underline
+    normal-case
+    not-italic;
+}
+
+@font-face {
+  font-family: "Fairplex";
+  src: url("/css/fonts/FairplexNarrow Regular.ttf");
+}
