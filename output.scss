@@ -1,0 +1,10 @@
+@use 'css/sass/mixin' as *;
+
+@import 'node_modules/tailwindcss/utilities';
+@import 'node_modules/tailwindcss/base';
+@import 'node_modules/tailwindcss/screens';
+
+@import 'css/sass/primary_layout';
+@import 'css/sass/secondary_layout';
+@import 'css/sass/typography';
+ 
