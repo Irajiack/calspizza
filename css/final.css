@@ -1,3 +1,51 @@
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.inline {
+  display: inline;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 /*
 ! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com
 */
@@ -554,48 +602,166 @@ video {
   --tw-contain-style:  ;
 }
 
+.hover\:text-yellow-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(253 224 71 / var(--tw-text-opacity));
+}
+
 body {
   margin: 0px;
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
   --tw-bg-opacity: 1;
   background-color: rgb(229 220 213 / var(--tw-bg-opacity));
   padding: 0px;
 }
 
 header {
+  position: fixed;
   z-index: 10;
-  grid-column: span 3 / span 3;
   margin: 0px;
+  height: 100%;
   min-height: 100vh;
+  width: 25%;
   background-repeat: repeat;
-  padding: 1.25rem;
   text-align: center;
+  transform: translate(0, 0);
   background-image: url(/pictures/WoodTexture_Background.jpg);
-  border: 1px solid yellow;
+}
+
+header .inner {
+  display: grid;
+  max-height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+header .inner__bottom-container {
+  grid-column: span 12 / span 12;
+  justify-content: center;
+  text-align: center;
+}
+
+header .inner__top-container {
+  grid-column: span 6 / span 6;
+  margin-top: 1rem;
+}
+
+header .inner__top-container--flex {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+header .inner__logo {
+  width: 80%;
 }
 
 main {
-  grid-column: span 9 / span 9;
   margin: 0px;
   padding: 1.25rem;
   text-align: center;
-  border: 1px solid red;
 }
 
 footer {
-  grid-column: span 12 / span 12;
   margin: auto;
   text-align: center;
 }
 
-p {
+.main-footer-group {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 75%;
+  padding-bottom: 1.75rem;
+  text-align: center;
+}
+
+hr {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(27 26 7 / var(--tw-border-opacity));
+}
+
+.menu {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.menu__items {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 80%;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 220 213 / var(--tw-bg-opacity));
+}
+
+.display-menu {
   margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 4rem;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.display-menu__two-column {
+  position: relative;
+  grid-column: span 6 / span 6;
+  margin-top: 1.25rem;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.display-menu__three-column {
+  position: relative;
+  grid-column: span 4 / span 4;
+  margin-top: 1.25rem;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.display-menu__Titles {
+  grid-column: span 12 / span 12;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.display-menu__sizes {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.display-menu__sizes--size-three-columns {
+  grid-column: span 4 / span 4;
+}
+
+.display-menu__sizes--size-two-columns {
+  grid-column: span 6 / span 6;
+}
+
+p {
+  margin: 0px;
   font-family: Fairplex;
   font-size: 1rem;
   line-height: 1.5rem;
-  font-weight: 400;
   text-transform: none;
   font-style: normal;
   --tw-text-opacity: 1;
@@ -604,12 +770,10 @@ p {
 }
 
 h1 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
+  margin: 0px;
   font-family: Fairplex;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
   text-transform: none;
   font-style: normal;
   --tw-text-opacity: 1;
@@ -618,12 +782,10 @@ h1 {
 }
 
 h2 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
+  margin: 0px;
   font-family: Fairplex;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 400;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
   text-transform: none;
   font-style: normal;
   --tw-text-opacity: 1;
@@ -632,12 +794,10 @@ h2 {
 }
 
 h3 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
+  margin: 0px;
   font-family: Fairplex;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
   text-transform: none;
   font-style: normal;
   --tw-text-opacity: 1;
@@ -646,12 +806,10 @@ h3 {
 }
 
 h4 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
+  margin: 0px;
   font-family: Fairplex;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.75rem;
-  font-weight: 400;
   text-transform: none;
   font-style: normal;
   --tw-text-opacity: 1;
@@ -660,17 +818,20 @@ h4 {
 }
 
 a {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
+  margin: 0px;
   font-family: Fairplex;
   font-size: 1rem;
   line-height: 1.5rem;
-  font-weight: 400;
   text-transform: none;
   font-style: normal;
   --tw-text-opacity: 1;
   color: rgb(71 66 62 / var(--tw-text-opacity));
   text-decoration-line: underline;
+}
+
+a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(155 132 113 / var(--tw-text-opacity));
 }
 
 @font-face {

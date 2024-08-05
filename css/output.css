@@ -4,43 +4,136 @@
 body {
   @apply bg-timberwolf
     m-0
-    p-0
-    grid
-    grid-cols-12;
+    p-0;
 }
 
 header {
-  @apply min-h-screen
+  @apply fixed
+    min-h-screen
+    h-full
     text-center
     bg-repeat
     z-10
     m-0
-    p-5
-    col-span-3;
+    w-1/4;
+  transform: translate(0, 0);
   background-image: url(/pictures/WoodTexture_Background.jpg);
-  border: 1px solid yellow;
+}
+header .inner {
+  @apply w-full
+        max-h-full
+        grid
+        grid-cols-12;
+}
+header .inner__bottom-container {
+  @apply col-span-12
+            text-center
+            justify-center;
+}
+header .inner__top-container {
+  @apply col-span-6
+            mt-4;
+}
+header .inner__top-container--flex {
+  @apply flex
+                justify-center
+                justify-items-center;
+}
+header .inner__logo {
+  @apply w-4/5;
 }
 
 main {
   @apply m-0
     p-5
-    col-span-9
     text-center;
-  border: 1px solid red;
 }
 
 footer {
   @apply m-auto
-    text-center
-    col-span-12;
+    text-center;
+}
+
+.main-footer-group {
+  @apply text-center
+    absolute
+    top-0
+    right-0
+    w-3/4
+    pb-7;
+}
+
+hr {
+  @apply border-smokeyBlack
+    border
+    w-4/5
+    mx-auto;
+}
+
+.menu {
+  @apply w-full
+    flex
+    flex-col;
+}
+.menu__items {
+  @apply bg-timberwolf
+        w-4/5
+        rounded
+        mx-auto
+        my-2;
+}
+
+.display-menu {
+  @apply w-full
+    grid
+    grid-cols-12
+    mt-5
+    mb-16;
+}
+.display-menu__two-column {
+  @apply py-5
+        col-span-6
+        h-full
+        relative
+        flex
+        flex-col
+        justify-center
+        justify-between
+        mt-5;
+}
+.display-menu__three-column {
+  @apply py-5
+        col-span-4
+        h-full
+        relative
+        flex
+        flex-col
+        justify-center
+        justify-between
+        mt-5;
+}
+.display-menu__Titles {
+  @apply col-span-12
+        py-3;
+}
+.display-menu__sizes {
+  @apply grid
+        grid-cols-12
+        w-full
+        py-3;
+}
+.display-menu__sizes--size-three-columns {
+  @apply col-span-4;
+}
+.display-menu__sizes--size-two-columns {
+  @apply col-span-6;
 }
 
 p {
   @apply text-taupe
     font-fairplex
     text-base
-    my-5
-    font-normal 
+    m-0
     no-underline
     normal-case
     not-italic;
@@ -49,9 +142,8 @@ p {
 h1 {
   @apply text-taupe
     font-fairplex
-    text-3xl
-    my-5
-    font-normal 
+    text-4xl
+    m-0
     no-underline
     normal-case
     not-italic;
@@ -60,9 +152,8 @@ h1 {
 h2 {
   @apply text-taupe
     font-fairplex
-    text-2xl
-    my-5
-    font-normal 
+    text-3xl
+    m-0
     no-underline
     normal-case
     not-italic;
@@ -71,9 +162,8 @@ h2 {
 h3 {
   @apply text-taupe
     font-fairplex
-    text-xl
-    my-5
-    font-normal 
+    text-2xl
+    m-0
     no-underline
     normal-case
     not-italic;
@@ -82,9 +172,8 @@ h3 {
 h4 {
   @apply text-taupe
     font-fairplex
-    text-lg
-    my-5
-    font-normal 
+    text-xl
+    m-0
     no-underline
     normal-case
     not-italic;
@@ -94,11 +183,13 @@ a {
   @apply text-taupe
     font-fairplex
     text-base
-    my-5
-    font-normal 
+    m-0
     underline
     normal-case
     not-italic;
+}
+a:hover {
+  @apply text-beaver;
 }
 
 @font-face {

@@ -6,25 +6,28 @@ p
 }
 h1
 {
-    @include text($fontSize:"text-3xl");
+    @include text($fontSize:"text-4xl");
 }
 h2
 {
-    @include text($fontSize:"text-2xl");
+    @include text($fontSize:"text-3xl");
 }
 h3
 {
-    @include text($fontSize:"text-xl");
+    @include text($fontSize:"text-2xl");
 }
 h4
 {
-    @include text($fontSize:"text-lg");
+    @include text($fontSize:"text-xl");
 }
 a
 {
     @include text($textdecoration: "underline");
-
-    
+    &:hover
+    {
+        @apply
+        text-beaver;
+    }
 }
 
 @font-face {

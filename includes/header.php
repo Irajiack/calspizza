@@ -1,4 +1,8 @@
 <?php
+if(!isset($_SESSION['LANG']))
+{ 
+   session_start();
+}
 date_default_timezone_set('America/Montreal');
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/translator.php';
 ?>
@@ -14,9 +18,46 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/translator.php';
     <meta name="identifier-url" content="calspizza.ca" />
     <meta name="author" content="Camille Élisabeth Bleau" />
     <link rel="stylesheet" type="text/css" href="css/final.css" />
+    <script src="https://kit.fontawesome.com/27d1739a1d.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-
+        <div class="inner">
+            <div class="inner__top-container">
+                <a href="/">
+                    <img src="pictures/logo_new_1000.png" class="inner__logo">
+                </a>
+            </div>
+            <div class="inner__top-container inner__top-container--flex">
+            <?php
+                if (getLanguage() === 'en') 
+                {
+                    echo '<a href="' . $_SERVER['PHP_SELF'] . '?lang=fr" class="text-white hover:text-yellow-300">Français <img src="pictures/LangFrench.png" class="w-10 inline ml-3"></a>';
+                } 
+                else 
+                {
+                    echo '<a href="' . $_SERVER['PHP_SELF'] . '?lang=en" class="text-white hover:text-yellow-300">English <img src="pictures/LangEnglish.png" class="w-10 inline ml-3"></a>';
+                }
+            ?>
+            </div>
+            <div class="inner__bottom-container">
+                <a class="text-white text-2xl hover:text-yellow-300" href="tel:8193226421"><i class="fa-solid fa-phone-volume"></i> (819)-322-6421 </a>
+                <nav class="menu mt-3">
+                    <a href='/specials.php0' class="menu__items text-lg"><?=translator("menu_combo")?></a>
+                    <a href='/pizza.php' class="menu__items text-lg"><?=translator("menu_pizza")?></a>
+                    <a href='/souvlaki.php' class="menu__items text-lg"><?=translator("menu_pita")?></a>
+                    <a href='/subs.php' class="menu__items text-lg"><?=translator("menu_subs")?></a>
+                    <a href='/salads.php' class="menu__items text-lg"><?=translator("menu_salads")?></a>
+                    <a href='/pasta.php' class="menu__items text-lg"><?=translator("menu_pastas")?></a>
+                    <a href='/burger.php' class="menu__items text-lg"><?=translator("menu_burger")?></a>
+                    <a href='/fries.php' class="menu__items text-lg"><?=translator("menu_fries")?></a>
+                    <a href='/sandwich.php' class="menu__items text-lg"><?=translator("menu_sandwich")?></a>
+                    <a href='/plates.php' class="menu__items text-lg"><?=translator("menu_plates")?></a>
+                    <a href='/sides.php' class="menu__items text-lg"><?=translator("menu_sides")?></a>
+                </nav>
+            </div>
+        </div>
     </header>
-    <main>
+    <div class="main-footer-group">
+        <main>
+        <h1><?=translator("catchPhrase")?></h1>

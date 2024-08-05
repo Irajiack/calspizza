@@ -1,12 +1,11 @@
 
-@mixin text($color:"text-taupe", $fontFamily: "font-fairplex", $fontSize:"text-base", $margin:"my-5", $fontWeight: "font-normal", $textdecoration: "no-underline", $textTransform: "normal-case", $fontStyle: "not-italic")
+@mixin text($color:"text-taupe", $fontFamily: "font-fairplex", $fontSize:"text-base", $margin:"m-0", $textdecoration: "no-underline", $textTransform: "normal-case", $fontStyle: "not-italic")
 {
     @apply 
     #{$color}
     #{$fontFamily}
     #{$fontSize}
     #{$margin}
-    #{$fontWeight} 
     #{$textdecoration}
     #{$textTransform}
     #{$fontStyle};
