@@ -3,6 +3,10 @@
   margin-bottom: 2.5rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -749,12 +753,24 @@ hr {
   padding-bottom: 0.75rem;
 }
 
+.display-menu__sizes--grid-10 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .display-menu__sizes--size-three-columns {
   grid-column: span 4 / span 4;
 }
 
 .display-menu__sizes--size-two-columns {
   grid-column: span 6 / span 6;
+}
+
+.display-menu__sizes--size-five-columns {
+  grid-column: span 2 / span 2;
 }
 
 p {

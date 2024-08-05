@@ -122,11 +122,20 @@ hr {
         w-full
         py-3;
 }
+.display-menu__sizes--grid-10 {
+  @apply grid
+            grid-cols-10
+            w-full
+            py-3;
+}
 .display-menu__sizes--size-three-columns {
   @apply col-span-4;
 }
 .display-menu__sizes--size-two-columns {
   @apply col-span-6;
+}
+.display-menu__sizes--size-five-columns {
+  @apply col-span-2;
 }
 
 p {

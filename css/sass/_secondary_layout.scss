@@ -80,7 +80,15 @@ hr
         w-full
         py-3
         ;
-
+        &--grid-10
+        {
+            @apply
+            grid
+            grid-cols-10
+            w-full
+            py-3
+            ;
+        }
         &--size-three-columns
         {
             @apply
@@ -91,6 +99,12 @@ hr
         {
             @apply
             col-span-6
+            ;
+        }
+        &--size-five-columns
+        {
+            @apply
+            col-span-2
             ;
         }
     }
