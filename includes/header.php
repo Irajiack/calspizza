@@ -43,7 +43,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/translator.php';
             <div class="inner__bottom-container">
                 <a class="text-white text-2xl hover:text-yellow-300" href="tel:8193226421"><i class="fa-solid fa-phone-volume"></i> (819)-322-6421 </a>
                 <nav class="menu mt-3">
-                    <a href='/specials.php0' class="menu__items text-lg"><?=translator("menu_combo")?></a>
+                    <a href='/specials.php' class="menu__items text-lg"><?=translator("menu_combo")?></a>
                     <a href='/pizza.php' class="menu__items text-lg"><?=translator("menu_pizza")?></a>
                     <a href='/souvlaki.php' class="menu__items text-lg"><?=translator("menu_pita")?></a>
                     <a href='/subs.php' class="menu__items text-lg"><?=translator("menu_subs")?></a>
