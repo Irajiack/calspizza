@@ -157,7 +157,7 @@ hr {
 }
 .display-menu__three-column {
   @apply py-5
-        col-span-4
+        col-span-12
         h-full
         relative
         flex
@@ -165,6 +165,11 @@ hr {
         justify-center
         justify-between
         mt-5;
+}
+@media (screen(lg)) {
+  .display-menu__three-column {
+    @apply col-span-4;
+  }
 }
 .display-menu__Titles {
   @apply col-span-12
@@ -190,6 +195,15 @@ hr {
 }
 .display-menu__sizes--size-five-columns {
   @apply col-span-2;
+}
+
+.hidden-moile {
+  @apply hidden;
+}
+@media (screen(lg)) {
+  .hidden-moile {
+    @apply block;
+  }
 }
 
 p {

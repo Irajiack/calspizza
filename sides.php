@@ -143,7 +143,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
             <?=translator("Desert_Title")?>
         </h2>
     </div>
-    <div class="display-menu__three-column"></div>
+    <div class="display-menu__three-column hidden-moile"></div>
     <div class="display-menu__three-column">
         <div>
             <h2><?=translator("Desert")?></h2>
@@ -151,7 +151,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
         </div>
         <hr>
     </div>
-    <div class="display-menu__three-column"></div>
+    <div class="display-menu__three-column hidden-moile"></div>
 </section>
 <section class="display-menu">
     <div class="display-menu__Titles">
@@ -239,7 +239,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
         </div>
         <hr>
     </div>
-    <div class="display-menu__three-column"></div>
+    <div class="display-menu__three-column hidden-moile"></div>
     <div class="display-menu__three-column">
         <div>
             <h2><?=translator("Sauce_Dressing")?></h2>
@@ -260,7 +260,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
         </div>
         <hr>
     </div>
-    <div class="display-menu__three-column"></div>
+    <div class="display-menu__three-column hidden-moile"></div>
 </section>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

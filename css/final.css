@@ -1,3 +1,7 @@
+.\!col-span-12 {
+  grid-column: span 12 / span 12 !important;
+}
+
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
@@ -793,7 +797,7 @@ hr {
 
 .display-menu__three-column {
   position: relative;
-  grid-column: span 4 / span 4;
+  grid-column: span 12 / span 12;
   margin-top: 1.25rem;
   display: flex;
   height: 100%;
@@ -802,6 +806,12 @@ hr {
   justify-content: space-between;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+@media ((min-width: 1024px)) {
+  .display-menu__three-column {
+    grid-column: span 4 / span 4;
+  }
 }
 
 .display-menu__Titles {
@@ -836,6 +846,16 @@ hr {
 
 .display-menu__sizes--size-five-columns {
   grid-column: span 2 / span 2;
+}
+
+.hidden-moile {
+  display: none;
+}
+
+@media ((min-width: 1024px)) {
+  .hidden-moile {
+    display: block;
+  }
 }
 
 p {

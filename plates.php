@@ -71,7 +71,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
         </div>
         <hr>
     </div>
-    <div class="display-menu__three-column"></div>
+    <div class="display-menu__three-column hidden-moile"></div>
     <div class="display-menu__three-column">
         <div>
             <h2><?=translator("Plates_Fish")?></h2>
@@ -80,7 +80,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
         </div>
         <hr>
     </div>
-    <div class="display-menu__three-column"></div>
+    <div class="display-menu__three-column hidden-moile"></div>
 </section>
 
 

@@ -100,7 +100,7 @@ hr
     {
         @apply 
         py-5
-        col-span-4
+        col-span-12
         h-full
         relative
         flex
@@ -109,6 +109,9 @@ hr
         justify-between
         mt-5
         ;
+        @media (screen(lg)) {
+            @apply col-span-4;
+          }
     }
     &__Titles
     {
@@ -154,5 +157,13 @@ hr
         }
     }
 }
-
+.hidden-moile
+{
+    @apply
+    hidden
+    ;
+    @media (screen(lg)) {
+        @apply block;
+      }
+}
 
