@@ -8,16 +8,22 @@ body {
 }
 
 header {
-  @apply fixed
+  @apply hidden
+    fixed
     min-h-screen
     h-full
     text-center
     bg-repeat
     z-10
     m-0
-    w-1/4;
-  transform: translate(0, 0);
+    w-1/4
+    min-w-56;
   background-image: url(/pictures/WoodTexture_Background.jpg);
+}
+@media (screen(lg)) {
+  header {
+    @apply block;
+  }
 }
 header .inner {
   @apply w-full
@@ -31,8 +37,8 @@ header .inner__bottom-container {
             justify-center;
 }
 header .inner__top-container {
-  @apply col-span-6
-            mt-4;
+  @apply col-span-12
+            my-4;
 }
 header .inner__top-container--flex {
   @apply flex
@@ -59,8 +65,51 @@ footer {
     absolute
     top-0
     right-0
-    w-3/4
+    w-full
     pb-7;
+}
+@media (screen(lg)) {
+  .main-footer-group {
+    @apply w-3/4;
+  }
+}
+
+.mobile-menu {
+  @apply cursor-pointer
+    block
+    absolute
+    p-10
+    text-5xl
+    text-taupe
+    top-0
+    left-0
+    z-50;
+}
+@media (screen(lg)) {
+  .mobile-menu {
+    @apply hidden;
+  }
+}
+
+.close-mobile-menu {
+  @apply cursor-pointer
+    hidden
+    absolute
+    p-2
+    text-3xl
+    text-red-600
+    top-2
+    z-40
+    left-56
+    bg-taupe;
+  border-radius: 0 10px 10px 0;
+}
+
+.logo {
+  @apply w-4/5
+    max-w-72
+    mx-auto
+    mb-5;
 }
 
 hr {
@@ -92,7 +141,7 @@ hr {
 }
 .display-menu__two-column {
   @apply py-5
-        col-span-6
+        col-span-12
         h-full
         relative
         flex
@@ -100,6 +149,11 @@ hr {
         justify-center
         justify-between
         mt-5;
+}
+@media (screen(lg)) {
+  .display-menu__two-column {
+    @apply col-span-6;
+  }
 }
 .display-menu__three-column {
   @apply py-5

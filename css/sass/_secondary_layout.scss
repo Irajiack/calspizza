@@ -1,5 +1,47 @@
 @use 'mixin' as *;
 
+.mobile-menu
+{
+    @apply
+    cursor-pointer
+    block
+    absolute
+    p-10
+    text-5xl
+    text-taupe
+    top-0
+    left-0
+    z-50
+    ;
+    @media (screen(lg)) {
+        @apply hidden;
+      }
+}
+.close-mobile-menu
+{
+    @apply
+    cursor-pointer
+    hidden
+    absolute
+    p-2
+    text-3xl
+    text-red-600
+    top-2
+    z-40
+    left-56
+    bg-taupe
+    ;
+    border-radius: 0 10px 10px 0;
+}
+.logo
+{
+    @apply 
+    w-4/5
+    max-w-72
+    mx-auto
+    mb-5;
+}
+
 hr
 {
     @apply
@@ -42,7 +84,7 @@ hr
     {
         @apply
         py-5
-        col-span-6
+        col-span-12
         h-full
         relative
         flex
@@ -50,6 +92,9 @@ hr
         justify-center
         justify-between
         mt-5;
+        @media (screen(lg)) {
+            @apply col-span-6;
+          }
     }
     &__three-column
     {

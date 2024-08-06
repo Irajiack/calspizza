@@ -19,15 +19,18 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/translator.php';
     <meta name="author" content="Camille Élisabeth Bleau" />
     <link rel="stylesheet" type="text/css" href="css/final.css" />
     <script src="https://kit.fontawesome.com/27d1739a1d.js" crossorigin="anonymous"></script>
+    <script src="javascript/global.js"></script>
 </head>
 <body>
-    <header>
+    <div ID="openMenu" class="mobile-menu" onclick="mobile_menu('open');">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div id="closeMenu" class="close-mobile-menu" onclick="mobile_menu('close');">
+        <i class="fa-solid fa-x"></i>
+    </div>
+    <header id="FullMenu">
+        
         <div class="inner">
-            <div class="inner__top-container">
-                <a href="/">
-                    <img src="pictures/logo_new_1000.png" class="inner__logo">
-                </a>
-            </div>
             <div class="inner__top-container inner__top-container--flex">
             <?php
                 if (getLanguage() === 'en') 
@@ -60,4 +63,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/translator.php';
     </header>
     <div class="main-footer-group">
         <main>
+        <a href="/">
+            <img src="pictures/logo_new_1000.png" class="logo">
+        </a>
         <h1><?=translator("catchPhrase")?></h1>
